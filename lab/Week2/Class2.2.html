@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Class 2</title>
+
+    <style>
+      button { font-size: 18px; }
+      #myButton { background-color:green; color: white; }
+      #myOtherButton { background-color:blue; color: white; }
+    </style>
+
+  </head>
+  <body>
+    <button id="myButton" title="The red button">Click to see</button>
+    <button id="myOtherButton">Click to see</button>
+  </body>
+
+  <script type = "application/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="application/javascript">
+
+
+    $("#myButton")
+      .text("Yellow")
+      .css({
+        "background-color":"yellow",
+        "color":"black"
+      });
+
+// pg 31 jquery event bind( event type, [event data], handler )
+    
+    var myObject = {
+      name: "popcorn"
+    };
+
+    // you don't have write inline function
+    var myClickHandlerFunction = function (e) {
+      alert(myObject.name);
+      console.log(e);
+    };
+    // $("#myButton").bind("click", myObject,  function(event){
+    //   alert(event.data.name);
+    // });
+
+    // or we can write above stmt like this with no arbitrary obj
+    $("#myButton").click(myClickHandlerFunction); // more often used
+    
+  </script>
+
+</html>
