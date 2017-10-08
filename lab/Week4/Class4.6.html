@@ -1,0 +1,63 @@
+<!-- add address inside json -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Class 4</title>
+
+    <style>
+      body { font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;}
+      header { font-size: 17px; font-weight: bold; }
+      /* vertical margin from header  top/ bottom/ left/ right*/
+      section { margin: 15px 0 0 0; }
+      address { font-style: normal;} 
+      address { display: inline-block;}
+    </style>
+
+  </head>
+  <body>
+    <header>Class 4 hands on</header>
+    <!-- grab section tag using jQuery, put response as text-->
+    <section>
+      Welcome 
+      <span id="welcomeName">
+
+      </span>
+
+      <div> Address: <address></address>
+      </div>
+    </section>
+  </body>
+
+  <script type = "application/javascript" src="jquery-3.2.1.min.js"></script>
+  <script type="application/javascript">
+    
+    // make it unique to stop it from caching
+    var aNumber = new Date().getTime();
+
+    $.ajax({
+      /* key value pair for url*/
+      // we will error to the file and it shows on DOM error message
+      url: "text.txt?key=" + aNumber,
+
+      success: function (response) {
+        // $("section").text(response); /* if you have this on it just says {obj: obj}
+        // We are adding span id #welcomeName to append name
+        // $("#welcomeName").text(response.name);
+        $("section > span").text(response.name); /*immd child*/
+        $("section address").text(response.address); /*add*/
+      },
+      // tell file we are looking for JSON file so it will parse outof object
+      // otherwise, it will show it as {"name": "John"}
+      dataType: "JSON",
+      // insert error inside of DOM inside of () is error obj
+      //  you can name it function (foo)
+      error: function (jAjaxObj) {
+        alert("Sorry! Your request " + jAjaxObj.statusText);
+      }
+    });
+    
+
+  </script>
+
+</html>

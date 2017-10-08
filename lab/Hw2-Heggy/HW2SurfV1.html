@@ -1,0 +1,91 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HW 2</title>
+<style>
+    body {
+        min-height: 460px; background-color: #696565;
+        font: 14px Arial, Helvetica;
+    }
+    #carousel {
+        margin: 50px auto;
+        width: 350px;
+        height: 300px;
+        box-shadow: 0 0 10px black;
+        /* this hides other photos that doesn't fit */
+        overflow: hidden;
+        position: relative;}
+    /* 3 images  width 350X4 = 1400px offset of 40 = 390 X 4 = 1560px */
+    #carousel ul {list-style: none; width: 1560px;}
+    /* top down used to be now float makes it left right heierchy */
+    #carousel ul li {float: left; margin: -40px;}
+
+    #keyPad {
+        width: 598px; height: 50px;
+        position: absolute; bottom: 5px; left:5px;
+        border: 1px solid #3f3f3f;
+        border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: #a2d18c;
+    }
+    #navBar { text-align: center; margin-top: 15px; color: #5c5c5c; }
+    #navBar a { color: #5c5c5c; text-decoration: none; text-shadow: -1px -1px #000; margin: 0 15px; }
+    h1{
+        color: rgb(200, 228, 197);
+        text-align: center;
+    }
+</style>
+<script type = "application/javascript" src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+  <h1> Maude Lewis</h1>
+    <div id="carousel">
+        <div id="viewPort">
+            <ul>
+                <li><img src="asset/cat.jpg" alt="3yellow eyed kitty"></li>
+                <li><img src="asset/cowTwin.jpg" alt="dotted cows"></li>
+                <li><img src="asset/modelT.jpg" alt="car couple"></li>
+                <li><img src="asset/sandyCove.jpg" alt="hilly grass"></li>
+            </ul>
+        </div>
+        <div id="keyPad">
+            <div id="navBar"><a href="prev">Prev</a>|<a href="next">Next</a></div>
+        </div>
+    </div> <!-- end carousel -->
+</body>
+
+<script>
+/**
+ *  Create a photo carousel.
+ *  Add template within viewPort. Use attached four images.
+ *  Add JavaScript and jQuery to add behavior to the 'Prev' and 'Next' link.
+ */
+    $(function () {
+        // setInerval() method calls a function or evaluates an Expression
+        // at 3000 milliseconds
+        setInterval(function(){
+            // jQuery .animate move 1 picture width 
+            $("#carousel ul").animate({marginLeft:"-350px"},800, function(){
+                // look for the last image of carousel, after that insert first img
+                // (decendent rule) in other word, head follows tail
+                $("#carousel ul li:last").after($("#carousel ul li:first"));
+                // 'this' => "#carousel ul" left of the dot rule in animate method call
+                $(this).css("margin-left", "0");
+            });
+        },3000);
+    });
+
+   
+</script>
+
+</html>
+
+<!-- https://www.ibm.com/developerworks/library/wa-oojavascript/ -->
+<!-- https://www.youtube.com/watch?v=Go7Mc-cfsKU -->
+<!-- https://www.youtube.com/watch?v=DB0LZkpvY94  surfhtml simpler -->
+
+<!-- based surfing slider on https://www.youtube.com/watch?v=qDkZ1Hf1zWk -->
+<!-- image slider simple https://www.youtube.com/watch?v=KkzVFB3Ba_o -->
+
+<!-- learn to <code></code> https://www.youtube.com/playlist?list=PLoYCgNOIyGABdI2V8I_SWo22tFpgh2s6_ -->

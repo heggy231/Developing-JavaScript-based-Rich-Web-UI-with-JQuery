@@ -1,0 +1,44 @@
+<!-- Now let's show the server response inside the body of html. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Class 4</title>
+
+    <style>
+      body { font-family: cursive;}
+      header { font-size: 17px; font-weight: bold; }
+      /* vertical margin from header  top/ bottom/ left/ right*/
+      section { margin: 15px 0 0 0; }  
+    </style>
+
+  </head>
+  <body>
+    <header>Class 4 hands on</header>
+    <!-- grab section tag using jQuery, put response as text-->
+    <section>
+
+    </section>
+  </body>
+
+  <script type = "application/javascript" src="jquery-3.2.1.min.js"></script>
+  <script type="application/javascript">
+    
+    // make it unique to stop it from caching
+    var aNumber = new Date().getTime();
+
+    $.get({
+      /* key value pair for url*/
+      url: "text.txt?key=" + aNumber,
+      success: function (response) {
+        // this alerts response
+        alert(response);
+        // this inserts into html dom 
+        $("section").text(response);
+      }
+    });
+    
+
+  </script>
+
+</html>

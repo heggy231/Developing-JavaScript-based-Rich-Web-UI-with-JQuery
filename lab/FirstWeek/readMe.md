@@ -92,3 +92,12 @@ why we have 2 different visibility and display?
 visiblity: doesn't recalculate all browser
 display: browser has to recalbulate everything.
 
+- Class week3
+* jQuery Effects (animation)
+pg 38 of slides
+
+Jony Ive Explains Why He Decided To Gut Skeuomorphism From iOS 7
+
+Skeuomorphism - 3-D effect on iphone calculator now it is flat look.
+ 
+
