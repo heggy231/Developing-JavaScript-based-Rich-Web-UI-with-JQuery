@@ -1,0 +1,140 @@
+<!-- https://www.youtube.com/watch?v=Cc3K2jDdKTo
+
+https://github.com/heggy231/jQuery-Tutorial-by-LearnCode -->
+
+<html>
+    
+      <head>
+        <title> jQuery Tutorial #1 </title>
+        <script type = "application/javascript" src="resources/js/libs/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+      </head>
+      <body>
+          <!-- [if lt IE 10]>
+            <p class="browsehappy">
+              You are using an <strong>outdated</strong> browser.
+              Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+            </p>
+          <![endif]-->
+      
+          <div class="container">
+            <div class="jumbotron">
+              <h1>Let's Have Fun!</h1>
+              <!--step 1) html5 allows making your own attribute data-x -->
+              <!-- get rid of id and add class to refer multiple classes -->
+              <button class="panel-button" data-panelid="panel1">#btn1</button>
+              <button class="panel-button" data-panelid="panel2">#btn2</button>
+              <button class="panel-button" data-panelid="panel3">#btn3</button>
+              <button class="panel-button" data-panelid="panel4">#btn4</button>
+            </div>
+      
+          <div class="row">
+            <div class="col-xs-3">
+              <div id="panel1" style="display: none" class="panel panel-primary">
+              <!-- <div id="panel1" class="panel panel-primary"> -->
+                <div class="panel-heading">
+                  #panel1
+                </div>
+                <div class="panel-body">content
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div id="panel2" style="display: none" class="panel panel-primary">
+              <!-- <div id="panel2" class="panel panel-primary"> -->
+                <div class="panel-heading">
+                  #panel2
+                </div>
+                <div class="panel-body">content
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div id="panel3" style="display: none" class="panel panel-primary">
+              <!-- <div id="panel3" class="panel panel-primary"> -->
+                <div class="panel-heading">
+                  #panel3
+                </div>
+                <div class="panel-body">content
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div id="panel4" style="display: none" class="panel panel-primary">
+              <!-- <div id="panel4" class="panel panel-primary"> -->
+                <div class="panel-heading">
+                  #panel4
+                </div>
+                <div class="panel-body">content
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      <script>
+
+        // 1. add custom made data-panel=panel1 attribute to button line 27
+        // 2. in console do a search by attribute
+        //      $('button[data-panelid=panel1]')
+        //     or use id attribute
+        //      $('button[id=btn1])
+
+        $(function() {
+          // DRY principle, update id to class so it can be refer for multiple
+          //  currently, if click on any buttons, it toggles panel1 only
+          // $('.panel-button').on('click', function() {
+          //   $('#panel1').toggle();
+          // });
+
+          var content = "My New Info"
+
+          // revision 2: To add more functionality, 
+          $('.panel-button').on('click', function() {
+            // this refers to the specific button clicked
+            //  .attr('data-panelid') will give me info about which id
+            // var panelId = $(this).attr('data-panelid');
+            // this shows me result of what panelId is ex: panel2
+            // alert(panelId);
+
+            // below is same as ex) $('#panel2').toggle(); when click second 
+            //  panel 
+            // $('#'+panelId).toggle();
+            // refer to descent of #panel1 .panel-body and insert text
+            // $('#'+panelId+' .panel-body').html(content);
+            // alert('#'+panelId+' .panel-body');
+
+            // To clean out #panel1 .panel-body => .html('')
+            // $('#'+panelId+' .panel-body').html('');
+
+            // to find out whoever was clicked on.
+            //  you can see panelclass
+            var panelClass = $(this).attr('class');
+            alert(panelClass); /* panel-button */
+          });
+
+
+          /* this is repeating */
+          // $('#btn2').on('click', function() {
+          //   $('#panel2').toggle();
+          // });
+          // $('#btn3').on('click', function() {
+          //   $('#panel3').toggle();
+          // });
+          // $('#btn4').on('click', function() {
+          //   $('#panel4').toggle();
+          // });
+
+        });
+      </script>
+    
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      
+    </body>
+    </html>
+    
+    <!-- https://github.com/kaileeagray/learn_code_academy_jquery/blob/master/tutorials_1_2_3/index.js -->

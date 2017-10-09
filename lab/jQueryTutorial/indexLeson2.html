@@ -1,0 +1,192 @@
+<!-- https://www.youtube.com/watch?annotation_id=annotation_1494025287&feature=iv&src_vid=hMxGhHNOkCU&v=G-POtu9J-m4
+
+https://github.com/heggy231/jQuery-Tutorial-by-LearnCode -->
+
+<html>
+    
+      <head>
+        <title> jQuery Tutorial #1 </title>
+        <script type = "application/javascript" src="resources/js/libs/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+      </head>
+      <body>
+          <!-- [if lt IE 10]>
+            <p class="browsehappy">
+              You are using an <strong>outdated</strong> browser.
+              Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+            </p>
+          <![endif]-->
+      
+          <div class="container">
+            <div class="jumbotron">
+              <h1>Let's Have Fun!</h1>
+              <button id="btn1" >#btn1</button>
+              <button id="btn2" >#btn2</button>
+              <button id="btn3" >#btn3</button>
+              <button id="btn4" >#btn4</button>
+            </div>
+      
+          <div class="row">
+            <div class="col-xs-3">
+              <div id="panel1" style="display: none" class="panel panel-primary">
+              <!-- <div id="panel1" class="panel panel-primary"> -->
+                <div class="panel-heading">
+                  #panel1
+                </div>
+                <div class="panel-body">content
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div id="panel2" style="display: none" class="panel panel-primary">
+              <!-- <div id="panel2" class="panel panel-primary"> -->
+                <div class="panel-heading">
+                  #panel2
+                </div>
+                <div class="panel-body">content
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div id="panel3" style="display: none" class="panel panel-primary">
+              <!-- <div id="panel3" class="panel panel-primary"> -->
+                <div class="panel-heading">
+                  #panel3
+                </div>
+                <div class="panel-body">content
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div id="panel4" style="display: none" class="panel panel-primary">
+              <!-- <div id="panel4" class="panel panel-primary"> -->
+                <div class="panel-heading">
+                  #panel4
+                </div>
+                <div class="panel-body">content
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      <script>
+        // jQuery goes inside of document ready funtion
+        // short way of writing document.ready $(function() {});
+        $(function() {
+          // change html text using 'text'.html()
+          // $('#btn1').html('my button');
+          
+          // gets rid of all elements only text 'my new panel' displays
+          // $('#panel1').html('my new panel <strong>wow</strong>');
+          
+          // Listen to the 'click' event and run callback function
+          //  when btn1 clicked toggle panel1
+          // $('#btn1').on('click', function() {
+            // toggle show if hidden vs. hide if shown
+            // $('#panel1').toggle();
+            // $('#panel1').slideToggle(200); /* nice animation feel slide */
+
+          // When I am on the panel1 hide
+          // $('#panel1').on('click', function() {
+          //   $('#panel1').slideToggle(200);
+
+          // $('#panel1').on('click', function() {
+          //   $('#panel1').fadeOut(200);
+
+          // when clicks panels toggle
+          // $('#btn1').on('click', function() {
+          //   $('#panel1').fadeToggle(200);
+
+          // });
+
+          // $('#btn2').on('click', function() {
+          //   $('#panel2').fadeToggle(200);
+
+          // });
+
+          // $('#btn3').on('click', function() {
+          //   $('#panel3').fadeToggle(200);
+
+          // });
+
+          // $('#btn4').on('click', function() {
+          //   $('#panel4').fadeToggle(200);
+
+          // });
+
+          // mouseover to fadeToggle to trigger
+          // $('#btn1').on('mouseover', function() {
+          //   $('#panel1').fadeOut(200);
+
+          // });
+
+          // $('#btn2').on('mouseover', function() {
+          //   $('#panel2').fadeOut(200);
+
+          // });
+
+          // $('#btn3').on('mouseover', function() {
+          //   $('#panel3').fadeOut(200);
+
+          // });
+
+          // $('#btn4').on('mouseover', function() {
+          //   $('#panel4').fadeOut(200);
+
+          // });
+
+          // $('#btn1').on('click', function() {
+          //   $('#panel1').fadeIn(200);
+
+          // });
+
+          // $('#btn2').on('click', function() {
+          //   $('#panel2').fadeIn(200);
+
+          // });
+
+          // $('#btn3').on('click', function() {
+          //   $('#panel3').fadeIn(200);
+
+          // });
+
+          // $('#btn4').on('click', function() {
+          //   $('#panel4').fadeIn(200);
+
+          // });
+
+          // .find('.panel-body') <= finds things
+          // listen to events and trigger callback function to react
+          // $('#btn1').on('click', function() {
+          //   $('#panel1 .panel-body').html('my new panle content');
+          // });
+
+          // after adding each panels display: none > add click event to .show
+          //  .toggle
+          $('#btn1').on('click', function() {
+            $('#panel1').toggle();
+          });
+
+          $('#btn2').on('click', function() {
+            $('#panel2').toggle();
+          });
+          $('#btn3').on('click', function() {
+            $('#panel3').toggle();
+          });
+          $('#btn4').on('click', function() {
+            $('#panel4').toggle();
+          });
+        });
+      </script>
+    
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      
+    </body>
+    </html>
+    
+    <!-- https://github.com/kaileeagray/learn_code_academy_jquery/blob/master/tutorials_1_2_3/index.js -->

@@ -20,30 +20,6 @@
   <script type="application/javascript">
 
 
-    $("#myButton")
-      .text("Yellow")
-      .css({
-        "background-color":"yellow",
-        "color":"black"
-      });
-
-// pg 31 jquery event bind( event type, [event data], handler )
-    
-    var myObject = {
-      name: "popcorn"
-    };
-
-    // you don't have write inline function
-    var myClickHandlerFunction = function (e) {
-      alert(myObject.name);
-      console.log(e);
-    };
-    // $("#myButton").bind("click", myObject,  function(event){
-    //   alert(event.data.name);
-    // });
-
-    // or we can write above stmt like this with no arbitrary obj
-    $("#myButton").click(myClickHandlerFunction); // more often used
     
   </script>
 
