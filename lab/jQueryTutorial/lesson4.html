@@ -2,12 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>jquery</title>
+    <title>jquery DOM</title>
     <script type = "application/javascript" src="resources/js/libs/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <style media="screen">
     .special {
-      color: blue;
+      color: red;
+      font-size: 24px;
     }
   </style>
   </head>
@@ -23,18 +24,70 @@
             <li>3</li>
         </ul>
       </li>
-    </ul>
+    </ul>  
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <script>
       $(function () {
 
-        $('li').on('click', function () {
-          $(this).next().hide();
+        // $('li').on('click', function () {
+          // hides next element sibling clicked on
+          // $(this).next().hide();
 
+          // removes next element
+          // $(this).next().remove();
+
+          // remove all siblings
+          // $(this).siblings().remove();
+
+          // add class .special
+          // $(this).siblings().addClass('special');
+
+          // remove myself .special if I have it than 
+          // add class .special to my siblings not including me
+          // $(this).removeClass('special'); 
+          // $(this).siblings().addClass('special');
+
+          // when add .special to parent; everyone gets it
+          // $(this).parent().addClass('special');
+
+          // closest .list and add .special
+          // $(this).closest('.list').addClass('special');
+          
+          // only descendent of clicked is matched
+          // $(this).find('li').addClass('special');
+        // $('.list').on('click', function() {
+          // only the first element all under .list
+          // $(this).find('li').filter(':first').remove();
+          // click any list => find li, filter down to only
+          //  .special => remove
+          // $(this).find('li').filter('.special').remove();
+          // $(this).find('.special').remove();
+        
+        // .special is clicked alert special 
+        // $('.special').on('click', function() {
+        //   alert('special');
+
+        // when li clicked
+        // $('li').on('click', function() {
+          // hide that clicked element
+          // $(this).hide();
+          // if clicked element = .special or !.special
+          //  alert special
+          // if ( !$(this).is('.special') ) {
+            // alert('Not special');
+          // }
+        // });
+
+      // hide only when .sublist direct child li
+        $('li').on('click', function() {
+          // do other things to all li's
+          console.log('click on li');
+          if($(this).parent().is('.sublist')) {
+            $(this).hide();
+          }
         });
-
       });
     </script>
 
