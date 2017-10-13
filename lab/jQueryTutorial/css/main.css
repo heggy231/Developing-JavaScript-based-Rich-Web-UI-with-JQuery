@@ -20,6 +20,7 @@ same width/height of .carousel-inner */
 {
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 }
 /* all three container .carousel-inner .previousLink, .nextLink are floating */
 .previousLink, .nextLink

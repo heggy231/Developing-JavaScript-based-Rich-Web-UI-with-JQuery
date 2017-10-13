@@ -7,16 +7,16 @@ $(function() {
     var nextActiveImage = currentActiveImage.next();
 
     // if no more next image
-    if(nextActiveImage.length === 0){
+    if(nextActiveImage.length === 0) {
       // loop back to the first image
       nextActiveImage = $(".carousel-inner img").first();
     }
     // First remove img shown > add img-hidden to hide >css("z-index",-10) hidden img go to last stacked order. 
-
     currentActiveImage
     .removeClass("image-shown")
     .addClass("image-hidden")
     .css("z-index", -10);
+
     // make image show > remove hidden class > img top of z-index layer stack
     nextActiveImage.addClass("image-shown")
     .removeClass("image-hidden")
@@ -33,6 +33,27 @@ $(function() {
   $(".previousLink").on("click", function(event) {
 
     var currentActiveImage = $(".image-shown");
+    var nextActiveImage = currentActiveImage.prev();
+
+    // If at the first image (no more .prev())
+    if(nextActiveImage.length === 0) {
+      // loop back to last img so we can keep calling .prev()
+      nextActiveImage = $(".carousel-inner img").last();
+    }
+
+    currentActiveImage
+    .removeClass("image-shown")
+    .addClass("image-hidden")
+    .css("z-index", -10);
+
+    nextActiveImage
+    .addClass("image-shown")
+    .removeClass("image-hidden")
+    .css("z-index", 20);
+
+    $(".carousel-inner img")
+    .not([currentActiveImage, nextActiveImage])
+    .css("z-index",1);
 
     event.preventDefault();
   });
