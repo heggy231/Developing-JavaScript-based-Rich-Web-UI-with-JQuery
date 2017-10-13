@@ -4,6 +4,9 @@ UCSC ext jquery focus class note
 Toggling Demo: 
 https://thirsty-crown.glitch.me/
 
+photo slider previous (prev), next (next) using jQuery, html, css
+https://living-supermarket.glitch.me/
+
 - if you click on header open it nicely
 
 - Animation:  Move from point a to point b over period of time - fundamental of graphics over screen.
