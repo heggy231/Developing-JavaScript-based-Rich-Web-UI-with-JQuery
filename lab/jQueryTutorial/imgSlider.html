@@ -1,0 +1,96 @@
+<!-- img slider part-1 https://www.youtube.com/watch?v=tt9IsU3xbMA -->
+<html>
+    
+  <head>
+    <title> jQuery Img Slider </title>
+    <style type="text/css">
+    #hero {
+      width: 960px; height: 500px;
+      position: relative;
+      /* margin top/bottom: 50px, right/left: auto */
+      margin: 50px auto; 
+    }
+    #slider {
+      /* set width/height for slider for position: absolute, overflow: hidden to work*/
+      width: 960px; height: 500px;
+      /* help only who single img: position: absolute, overflow: hidden*/
+      position: absolute;
+      overflow: hidden;
+    }
+    #next {
+      /* arrow to be center inside box */
+      text-align: center;
+      /* vertically centered use 50px from height of #next box */
+      line-height: 50px;
+      color: #ffffff;
+      /* create box with color around the arrow */
+      width: 50px; height: 50px;
+      background-color: rgba(183,0,3,0.5);
+      /* box to be on top of the picture */
+      position: absolute;
+      /* height of img slider divide by 2: 500/2= 250px, minus height of the next/prev button divide by 2: 50/2=25px; then 250-25 = 225px */
+      top: 225px;
+      /* right arrow floating right */
+      right: 0;
+      z-index: 99;
+      cursor: pointer;
+      opacity: 0;
+    }
+    #prev {
+      /* arrow to be center inside box */
+      text-align: center;
+      /* vertically centered use 50px from height of #next box */
+      line-height: 50px;
+      color: #ffffff;
+      /* create box with color around the arrow */
+      width: 50px; height: 50px;
+      background-color: rgba(183,0,3,0.5);
+      /* box to be on top of the picture */
+      position: absolute;
+      /* height of img slider divide by 2: 500/2= 250px, minus height of the next/prev button divide by 2: 50/2=25px; then 250-25 = 225px */
+      top: 225px;
+      /* right arrow floating right */
+      left: 0;
+      z-index: 99;
+      cursor: pointer;
+      opacity: 0;
+    }
+    /* when you hover you want to see the arrow; toggle to no display when mouse !hover */
+    #hero:hover #next {
+      opacity: 1;
+      transition: all .5s ease-out;
+      -webkit-transition: all .5s ease-out;
+    }
+    #hero:hover #prev {
+      opacity: 1;
+      transition: all .5s ease-out;
+      -webkit-transition: all .5s ease-out;
+    }
+    </style>
+
+    <script type = "application/javascript" src="resources/js/libs/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <!-- [if lt IE 10]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser.
+        Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <div id="hero">
+
+      <div id="next">&rang;</div> <!-- End #next -->
+      <div id="prev">&lang;</div> <!-- End #prev -->
+
+      <div id="slider">
+        <img src="resources/img/boatHero3.jpg" alt="bird blue ocean">
+        <img src="resources/img/deerHero2.jpg" alt="couple of deers">
+        <img src="resources/img/maudieHero1.jpg" alt="artist Maudie">
+
+      </div><!-- End #slider -->
+
+    </div><!--End #hero -->
+  
+  </body>
+</html>
