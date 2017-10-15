@@ -28,8 +28,8 @@ Assignment 2
         </style>
     </head>
     <body>
-        <div id="carousel">
-            <div id="viewPort">
+        <div id="viewPort">
+            <div id="carousel">
                
             </div>
             <div id="keyPad">
@@ -56,3 +56,4 @@ http://bxslider.com/examples/custom-next-prev-selectors
 https://stackoverflow.com/questions/16438088/how-do-i-add-prev-and-next-buttons-to-my-jquery-
 
 https://www.ibm.com/developerworks/library/wa-oojavascript/
+

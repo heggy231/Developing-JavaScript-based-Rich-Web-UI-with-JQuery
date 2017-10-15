@@ -1,0 +1,17 @@
+.image-shown {
+  display: inline-block;
+}
+.image-hidden {
+  display: none;
+}
+.carousel-inner {
+  width: 500px;
+  height: 400px;
+  position: relative;
+}
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+/* https://medium.com/always-be-coding/abc-always-be-coding-d5f8051afce2 */

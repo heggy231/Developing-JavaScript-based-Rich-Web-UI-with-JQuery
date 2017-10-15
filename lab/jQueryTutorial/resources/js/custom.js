@@ -1,4 +1,5 @@
 // same as $(document).ready(function(){});
+//  $(function() {});
 $(function() {
 
   $(".nextLink").on("click", function(event) {
@@ -59,3 +60,42 @@ $(function() {
   });
 
 });
+
+// .image-shown
+// {
+//   display: inline-block;
+// }
+// .image-hidden
+// {
+//   display: none;
+// }
+// .carousel-inner
+// {
+//   width: 500px;
+//   height: 400px;
+//   /* container is 500x400px but img is biggger add position: relative, img to be 100%*/
+//   position: relative;
+//   float: left;
+// }
+// /* what ever img inside of div of .carousel-inner will have
+// same width/height of .carousel-inner */
+// .carousel-inner img
+// {
+//   width: 100%;
+//   height: 100%;
+//   border-radius: 5px;
+// }
+// /* all three container .carousel-inner .previousLink, .nextLink are floating */
+// .previousLink, .nextLink
+// {
+//   float:left;
+//   margin-top: 190px;
+// }
+// .previousLink
+// {
+//   margin-right: 50px;
+// }
+// .nextLink
+// {
+//   margin-left: 50px;
+// }

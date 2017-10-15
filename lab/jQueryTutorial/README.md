@@ -322,3 +322,75 @@ Summary now we are searching within existing panels' .tabs li.active
 - variable naming 
 when var $panel is jQuery selector add '$' to signify
 
+- codepen version of image slider
+<!-- https://codepen.io/heggy231/pen/vezNKMß -->
+
+
+- https://lnkd.in/gezbZcr
+#zIndex #stackingOrder #css
+
+In order to apply the z-index property to an element, you must first apply a position value of relative, absolute, or fixed. 
+
+https://medium.com/always-be-coding/abc-always-be-coding-d5f8051afce2
+
+https://www.lynda.com/CSS-tutorials/Margin-page-layouts/569190/601600-4.html
+
+- Lynda:Margin and page layouts:
+https://www.lynda.com/CSS-tutorials/Margin-page-layouts/569190/601600-4.html
+
+- Lynda: some great exercise files by Christina
+http://jsfiddle.net/user/christinatruong/fiddles/
+
+- background color with center text
+http://jsfiddle.net/christinatruong/c04bb8v8/
+
+- max-width concept
+.content-wrap {
+  <!-- max is 950px = 100% which makes the text wrap around. -->
+  max-width: 950px;
+  <!-- top/bottom left/right -->
+  margin: 0 auto;
+}
+
+- margin or padding?
+* margin: represents the area around an element
+
+box Model
+Draw box model with each properties labeled
+
+1. margin = space outside of the element
+2. border = display btwn padding and margin
+3. padding = space inside of the element
+4. content
+
+
+- side note about obj
+resource Part 2 Solutions
+https://www.rithmschool.com/courses/javascript/javascript-objects-exercises
+
+when you want to remove a object property
+use delete keyword
+<script> 
+var AboutMe = 
+{
+ name: "heggy",
+ age: 20
+
+};
+
+delete aboutMe.name;
+</script>
+
+
+## refer to an element 
+<html>
+
+<div id="keyPad">
+    <div id="navBar"><a href="prev">Prev</a>|<a href="next">Next</a></div>
+</div>
+
+</html>
+
+$("#keyPad a[href='next']")
+
+- resource: https://www.w3schools.com/jquery/jquery_selectors.asp
