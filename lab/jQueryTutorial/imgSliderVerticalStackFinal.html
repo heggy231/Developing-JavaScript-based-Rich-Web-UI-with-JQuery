@@ -2,15 +2,20 @@
 
 https://www.youtube.com/watch?v=bPZTlzUNbVo&index=3&list=PLZU0qJlzY07VyUpJfz8MNU6FBYkfPKDfz
 
-  Jquery carousel slider tutorial, Jquery Slider tutorial Introduction - Pt.2 / 5 -->
+  Jquery carousel slider tutorial, Jquery Slider tutorial Introduction - Pt.2 / 5 
+
+  https://immense-beer.glitch.me vertical
+  https://living-supermarket.glitch.me/ horizontal
+-->
 <html>
     
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>jQuery Slider V1 </title>
-    <!-- <link rel="stylesheet" href="css/mainV2.css"> -->
+    <link rel="stylesheet" href="css/mainFirstV.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
     <style>
-      .image-shown
+          .image-shown
       {
         display: inline-block;
       }
@@ -49,12 +54,15 @@ https://www.youtube.com/watch?v=bPZTlzUNbVo&index=3&list=PLZU0qJlzY07VyUpJfz8MNU
       {
         margin-left: 50px;
       }
-
-      footer{
-        margin: 10px;
-        float: left;
-        clear: both;
+      .center {
+        float:left;
+        margin: auto;
+        width: 60%;
+      /*   border: 3px solid #73AD21; */
+        padding: 10px;
+        text-align: center;
       }
+
     </style>
   </head>
   <body>
@@ -64,39 +72,30 @@ https://www.youtube.com/watch?v=bPZTlzUNbVo&index=3&list=PLZU0qJlzY07VyUpJfz8MNU
         Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
-
-    <div id="carousel">
-        <div id="viewPort">
-            <img class="image-shown" src="resources/img/image1.jpg" alt="building"/>
-            <img class="image-hidden" src="resources/img/image2.jpg" alt="carParked"/>
-            <img class="image-hidden" src="resources/img/image3.jpg" alt="boat"/>
-            <img class="image-hidden" src="resources/img/image4.jpg" alt="highwayHome"/>
-        </div>
-        <div id="keyPad">
-            <div id="navBar"><a class="prevLink" href="#">Prev</a>|<a class="nextLink" href="#">Next</a></div>
-        </div>
-    </div>
-
-
     <div class="page">
       <h2>Jquery Image Slider</h2>
 
       <div class="carousel-outer">
         <a class="previousLink" href="#">&lang;Previous</a><!-- End prev -->
         <div class="carousel-inner">
-            <img class="image-shown" src="resources/img/boatHero3.jpg" alt="birdBlueOcean"/>
-            <img class="image-hidden" src="resources/img/deerHero2.jpg" alt="coupleDeers"/>
+          
+            <img class="image-hidden" src="resources/img/boatHero3.jpg" alt="birdBlueOcean"/>
+            <img class="image-shown" src="resources/img/deerHero2.jpg" alt="coupleDeers"/>
             <img class="image-hidden" src="resources/img/maudieHero1.jpg" alt="artistMaudie"/>
         </div><!--End .carousel-inner -->
         <a class="nextLink" href="#">Next&rang;</a><!-- End next -->
       </div><!--End .carousel-outer -->
     </div><!--End .page -->
+  <footer class="center">
+      &copy; Copyright 2017 <a href="https://github.com/heggy231">Heggy Castaneda</a>, Images credit: <a href="https://www.artgalleryofnovascotia.ca/maud-lewis"> Art Gallery of Nova Scotia in Canada</a>
+  
+  </footer>
 
-    <!-- It is encouraged to add jQuery just before closing body tag -->
+    <!-- It is encouraged to add jQuery just before closing body tag document has been loaded -->
     <script type = "application/javascript" src="resources/js/libs/jquery.min.js"></script>
-    <script type = "application/javascript" src="resources/js/custom.js"></script>
+    <!-- <script type = "application/javascript" src="resources/js/custom.js"></script> -->
     <script>
-          // same as $(document).ready(function(){});
+      // same as $(document).ready(function(){});
       $(function() {
 
         $(".nextLink").on("click", function(event) {
@@ -157,7 +156,7 @@ https://www.youtube.com/watch?v=bPZTlzUNbVo&index=3&list=PLZU0qJlzY07VyUpJfz8MNU
         });
 
       });
+    
     </script>
   </body>
 </html>
-<!-- https://codepen.io/heggy231/pen/vezNKMß -->

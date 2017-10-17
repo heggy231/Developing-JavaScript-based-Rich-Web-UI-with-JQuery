@@ -49,15 +49,17 @@
   var individualImageWidth = 600;
   $("#carousel")
     .width(individualImageWidth * 4)
-    .css("position", "absolute")
+    .css("position", "absolute");
+
+  $("#viewPort")
+    .css("overflow", "hidden")
     .css("padding", 0);
 
-  $("#viewPort").css("overflow", "hidden");
-
   $("#keyPad a[href='next']").on('click', function(event){
-		event.preventDefault();
-    console.log('hi you clicked next');
-	});
+        event.preventDefault();
+        var carouselLeft = parseInt($("#carousel").css("left"));
+        $("#carousel").css("left", carouselLeft - individualImageWidth);
+  });
 </script>
 
 </html>

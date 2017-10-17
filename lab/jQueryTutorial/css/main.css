@@ -13,6 +13,7 @@
   /* container is 500x400px but img is biggger add position: relative, img to be 100%*/
   position: relative;
   float: left;
+
 }
 /* what ever img inside of div of .carousel-inner will have
 same width/height of .carousel-inner */
@@ -35,4 +36,10 @@ same width/height of .carousel-inner */
 .nextLink
 {
   margin-left: 50px;
+}
+
+footer{
+  margin: 10px;
+  float: left;
+  clear: both;
 }

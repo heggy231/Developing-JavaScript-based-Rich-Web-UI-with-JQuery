@@ -1,4 +1,4 @@
-<!-- https://repl.it/Mdjl/4 -->
+<!-- https://repl.it/Mdjl/6 -->
 <html>
   <head>
     <style>
@@ -22,11 +22,9 @@
         #navBar { text-align: center; margin-top: 15px; color: #5c5c5c; }
         #navBar a { color: #5c5c5c; text-decoration: none; text-shadow: -1px -1px #000; margin: 0 15px; }
 
-        img { float: left;
-        }
+        img { float: left; }
         /* #viewport {
-            padding: 0px; */
-        }
+            padding: 0px; }*/
     </style>
 </head>
 <body>
@@ -46,18 +44,32 @@
 <script type = "application/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type = "application/javascript">
 // no need to say $()function(){} 
-  var individualImageWidth = 600;
-  $("#carousel")
-    .width(individualImageWidth * 4)
-    .css("position", "absolute")
-    .css("padding", 0);
+var individualImageWidth = 600;
 
-  $("#viewPort").css("overflow", "hidden");
+        $("#carousel")
+          .width(individualImageWidth * 4)
+          .css("position", "absolute");
+        
+        // picture frame viewPort overflowing width 600 hides
+        $("#viewPort")
+          .css("overflow", "hidden")
+          .css("padding", 0);
 
-  $("#keyPad a[href='next']").on('click', function(event){
-		event.preventDefault();
-    console.log('hi you clicked next');
-	});
+        $("#keyPad a[href='next']").on("click", function (e) {
+            // when click href link doesn't open disable href function
+            e.preventDefault();
+            // every click 600px width movement
+            // find the #carousel left position, parseInt() to get rid of px and get int
+            var carouselLeft = parseInt($("#carousel").css("left")); 
+
+            // when you arrive at the last pic, $("#carousel").css("left") is -1800px
+            //  therefore if -1500 px you are not yet at the last pic left position; if left position > -1800 then keep 
+            // moving to the left
+            if(carouselLeft > -1800){
+                $("#carousel").css("left", carouselLeft - individualImageWidth);
+            }
+        });
+
 </script>
 
 </html>
