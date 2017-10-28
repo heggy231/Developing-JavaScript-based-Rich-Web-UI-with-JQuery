@@ -336,3 +336,5 @@ cc_carousel abosolute relative to body.
 it will start(0,0) top left
 we will bring someone inbtwween viewport position relative
 - then img will look at the viewport and have a absolute 
+
+- web component: inlining css with javascript: 

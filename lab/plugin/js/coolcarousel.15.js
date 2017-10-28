@@ -60,7 +60,6 @@
         
         setTimeout(function(){
         // 50 milisec stalling
-        // ccarouselWidth is total img width
           carouselWidth = parseInt(carouselWidth + $thisImage.width() + imageRightMargin);
           // console.log(">>>>" + $thisImage.width());
           // setCarouselWidth
@@ -72,10 +71,8 @@
         e.preventDefault();
         var carouselLeft = parseInt($carouselEl.css("left"));
 
-        // if(carouselLeft > -1500) {
-        // last one you have to have 2 pictures left
-        if(carouselLeft > -(carouselWidth - (individualImageWidth*2 + imageRightMargin))) {
-          $carouselEl.css("left", carouselLeft - (individualImageWidth + imageRightMargin));
+        if(carouselLeft > -1500) {
+          $carouselEl.css("left", carouselLeft - individualImageWidth);
         }
       });
 
@@ -89,7 +86,7 @@
         // when you arrive at the last pic, $("#carousel").css("left") is 0 px
         //  pic is moving to left to show more pic from right it needs to be less than 
         if(carouselLeft < 0){
-            $carouselEl.css("left", carouselLeft + (individualImageWidth + imageRightMargin));
+            $carouselEl.css("left", carouselLeft + individualImageWidth);
         }
       });
 
