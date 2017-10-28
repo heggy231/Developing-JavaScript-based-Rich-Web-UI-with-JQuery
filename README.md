@@ -302,3 +302,37 @@ parseInt();
 refactor since it is not waiting for display none for else
 
 - refactor
+
+- Final 
+Single pg view. 
+user sees things as you click 
+-if you pick limited >
+- if you click comprehensive >
+- comprehensive > personal detail form
+  after finish submit > just show thank you!
+
+- + Add More person 1, person 2, person 3 : you can limit 5 people to add
+
+- calendar jQuery, jQueryUI calendar plugin
+
+- top part: Plan > comprehensive > personal detail is bread crumb
+- links are hot- bread crums you go directly 
+- clicking back will take you back also, you are loading previous pg
+
+
+## dont call it page/screen as view
+- moving from one screen from another how dynamically I can
+* how to make it work.
+- date picker jQuery Ui > demo links
+** go to api documentation: 
+try auto complete widget
+
+- when we say absolute in html
+css means it is relatve to its body - in relation to body absolute works
+* if you do'nt have any element set to relatve then the body is 
+  * now all element to relative to body
+body by default has a postion relative
+cc_carousel abosolute relative to body.
+it will start(0,0) top left
+we will bring someone inbtwween viewport position relative
+- then img will look at the viewport and have a absolute 

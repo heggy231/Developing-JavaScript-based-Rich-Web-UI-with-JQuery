@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maudie Midterm A </title>
+    <!-- reset stylesheet is to reduce browser inconsistencies in things like default line heights, margins and font sizes of headings -->
+    <link rel="icon" href="images/favicon.png" type="image/gif" sizes="16x16">
+    <link rel='stylesheet' href='eric-meyer-reset.min.css' type='text/css' media='all' >
+    <link rel='stylesheet' href='myStyle.css' type='text/css' media='all'>
+    <link rel="stylesheet" href="flexslider.css" type="text/css" media="screen" >
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+    <style>
+      .clear {clear: both; }
+      /* fix flexslider dots and positioning */
+      .flexslider { margin-bottom: 10px; border: none; }
+      .flex-control-nav { bottom: 10px; }
+      .flex-control-paging li a { background: rgba(255, 255, 255, 0.5) none repeat scroll 0 0;}
+      .flex-control-paging li a.flex-active { background: rgba(255,255,255, 1) none repeat scroll 0 0;}
+      .flex-direction-nav a::before { color: #FFF; text-shadow: 1px 1px 0 rgba(255,0,0,.6); }
+      /*fix that img max-width in basic1.css from impacting flexslider images*/
+      /*fix right gap*/
+      .flex-direction-nav .flex-prev { left:0; }
+      .flex-direction-nav .flex-next { right: 0; text-align: right; }
+    </style>
+  </head>
+  <body>
+    <div class="row"> 
+      <a href="index.html"><img id="caticon" src="images/cat.jpg"  alt="cat icon"></a>
+      <h1 class="brand">Maudie Tribute Site</h1>
+        <ul class="topnav" >
+          <li>&nbsp;</li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class = "icon" >
+            <!-- javascript:void(0) means undefine > stay in same pg-->
+            <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+            <!-- Beware of soft wrap -->
+          </li>
+        </ul>
+    </div><!-- row -->
+    <br class="clear">
+    <div class="row">
+      <div class="flexslider">
+        <ul class="slides">
+          <li><img class="hero" src="images/maudieHero1.jpg" alt="Maudie smiles"></li>
+          <li><img class="hero" src="images/deerHero2.jpg" alt="mom and Baby deer"></li>
+          <li><img class="hero" src="images/boatHero3.jpg" alt="peaceful ocean"></li>
+        </ul><!-- .slides -->
+      </div><!--- .flexslider end -->
+    </div><!-- row -->
+
+    <div class="row">
+      <div class="one box">
+        <h2>Journey</h2>
+        <img src="images/cat.jpg" class="fourup" alt="three adorable yellow eyed cats">
+      </div> 
+      <div class="box two">
+        <h2>Her Passion</h2>
+        <img src="images/cowTwin.jpg" alt="Glamorous cow with long eyelashes">
+      </div> 
+      <div class="box three">
+        <h2>Fun Facts</h2>
+        <img src="images/modelT.jpg" alt="Fashionable couple in classic car">
+      </div> 
+      <div class="box four">
+        <h2>Home Life</h2>
+        <img src="images/sandyCove.jpg" alt="Sweet home with ocean and seagulls">
+      </div> 
+    </div><!-- row -->
+
+    <div class="row">
+      <h3>Here's a time line of Mrs. Lewis's life</h3>
+        <ul><strong>1903</strong> - Born in rural Yarmouth Maud Dowley. </ul> 
+        <ul><strong>1913</strong> - Drop out of school to get away from her school mates' constant mockery due to her juvenile rheumatoid arthritis disability.</ul>
+        <ul><strong>1937</strong> - Persuded Mr. Everett Lewis, an itinerant fish peddler, to hire her as a lived-in maid despite her disability. </ul>
+        <ul><strong>1938</strong> - Married to Mr. Everett Lewis </ul>
+        <ul><strong>1939</strong> - Sells her first painting while working as a night watchman at the "Poor Farm." </ul>
+        <ul><strong>1965</strong> - Maud is featured on CBC-TV broadcast and in numerous newspaper stories which brought her world wide publicity. </ul>  
+        <ul><strong>1968</strong> - Maud's health deteriorates after her hip fractue from a fall. </ul>  
+        <ul><strong>1970</strong> - Maud passes away on July 30th. </ul>
+    </div><!-- row -->
+
+    <div class="row">
+      <p class ="cred">Copyright &copy; Heggy Castaneda, 
+      Resource: 
+        <a href="https://timeline.com/maud-lewis-canadian-painter-79da8eabe9df"> Timeline </a> Biography 
+        <a href="https://shop.artgalleryofnovascotia.ca/products/maud-lewis-matted-print"> Art Gallery of Nova Scotia</a> for artist Lewis' painting images, 
+        <a href="http://sonyclassics.com/maudie/"> Mudie</a> movie scenes by sonyclassics
+        <a href="http://www.edu.pe.ca/threeoaks/art/601/lewis.htm"> Candian Database</a>
+      </p>
+    </div><!-- row -->
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery-1.11.min.js">\x3C/script>')</script>
+
+    <!-- FlexSlider -->
+    <script defer src="jquery.flexslider.js"></script>
+    <script>
+      function myFunction() {
+          document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
+      }
+      // Can also be used with $(document).ready()
+      $(window).load(function() {
+        $('.flexslider').flexslider({
+          animation: "slide"
+        });
+      });
+    </script>
+  </body>
+</html>
